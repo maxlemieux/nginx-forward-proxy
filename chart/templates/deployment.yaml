@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-forward-proxy
-  namespace: nginx-forward-proxy
+  namespace: nginx
   labels:
     app: nginx-forward-proxy
 spec:
