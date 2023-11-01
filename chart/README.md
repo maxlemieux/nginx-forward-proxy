@@ -2,7 +2,7 @@
 
 Helm chart for [hinata/nginx-forward-proxy](https://github.com/hinata/nginx-forward-proxy).
 
-HTTP forwarding proxy for testing Kubernetes applications.
+Forwarding proxy for testing Kubernetes applications.
 
 # Install
 
@@ -22,6 +22,7 @@ helm install -n nginx-forward-proxy hinata-nginx-forward-proxy . -f values.yaml 
 Test the proxy from a container in the cluster, with:
 ```
 curl -x http://nginx-forward-proxy.nginx-forward-proxy.svc:80 http://example.com
+curl -x http://nginx-forward-proxy.nginx-forward-proxy.svc:80 https://example.com
 ```
 
-Configure HTTP_PROXY in the cluster as `http://nginx-forward-proxy.nginx-forward-proxy.svc:80`.
+Configure HTTP_PROXY and HTTPS_PROXY in the cluster as `http://nginx-forward-proxy.nginx-forward-proxy.svc:80`.
