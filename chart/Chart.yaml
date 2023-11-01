@@ -1,0 +1,4 @@
+apiVersion: v2
+name: nginx-forward-proxy-chart
+description: A Helm chart for the Nginx Forward Proxy
+version: 0.1.0

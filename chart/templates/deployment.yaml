@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-forward-proxy
+  namespace: nginx-forward-proxy
+  labels:
+    app: nginx-forward-proxy
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: nginx-forward-proxy
+  template:
+    metadata:
+      labels:
+        app: nginx-forward-proxy
+    spec:
+      containers:
+      - name: nginx-forward-proxy
+        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        ports:
+        - containerPort: {{ .Values.service.targetPort }}

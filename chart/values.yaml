@@ -1,0 +1,7 @@
+replicaCount: 1
+image:
+  repository: hinata/nginx-forward-proxy
+  tag: latest
+service:
+  port: 80
+  targetPort: 3128

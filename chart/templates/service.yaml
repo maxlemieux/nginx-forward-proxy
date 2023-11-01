@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-forward-proxy
+  namespace: nginx-forward-proxy
+spec:
+  selector:
+    app: nginx-forward-proxy
+  ports:
+    - protocol: TCP
+      port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
