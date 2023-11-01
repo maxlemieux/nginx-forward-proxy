@@ -24,5 +24,3 @@ Test the proxy from a container in the cluster, with:
 curl -x http://nginx-forward-proxy.nginx.svc:80 http://example.com
 curl -x http://nginx-forward-proxy.nginx.svc:80 https://example.com
 ```
-
-Configure HTTP_PROXY and HTTPS_PROXY in the cluster as `http://nginx-forward-proxy.nginx.svc:80`.
