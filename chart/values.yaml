@@ -1,3 +1,4 @@
+namespace: nginx
 replicaCount: 1
 image:
   repository: hinata/nginx-forward-proxy
