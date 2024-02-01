@@ -16,7 +16,7 @@ Install the chart:
 
 ```
 cd nginx-forward-proxy/chart
-helm install -n nginx hinata-nginx-forward-proxy . -f values.yaml --create-namespace
+helm upgrade --install -n nginx hinata-nginx-forward-proxy . -f values.yaml --create-namespace
 ```
 
 Test the proxy from a container in the cluster, with:
